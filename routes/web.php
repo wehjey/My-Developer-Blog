@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'title' => 'My Developer Blog',
+        'page' => 'Home'
+    ];
+    return view('pages.home',$data);
+});
+
+Route::get('/post', function () {
+    $data = [
+        'title' => 'My Developer Blog',
+        'page' => 'post'
+    ];
+    return view('pages.post',$data);
 });
