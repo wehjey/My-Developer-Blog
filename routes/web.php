@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     $data = [
         'title' => 'My Developer Blog',
@@ -34,3 +35,7 @@ Route::get('/admin', function(){
     ];
     return view('admin.pages.dashboard',$data);
 })->name('dashboard');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
