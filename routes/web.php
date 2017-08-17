@@ -28,13 +28,7 @@ Route::get('/post', function () {
     return view('pages.post',$data);
 });
 
-Route::get('/admin', function(){
-    $data = [
-        'title' => 'Admin | My Developer Blog',
-        'pageLabel' => 'Dashboard'
-    ];
-    return view('admin.pages.dashboard',$data);
-})->name('dashboard');
+Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 Auth::routes();
 
