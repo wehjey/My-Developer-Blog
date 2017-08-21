@@ -13,64 +13,18 @@
             Dashboard</span>
         </a>
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-        <a class="nav-link" href="#">
-          <i class="fa fa-fw fa-area-chart"></i>
-          <span class="nav-link-text">
-            Charts</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-        <a class="nav-link" href="#">
-          <i class="fa fa-fw fa-table"></i>
-          <span class="nav-link-text">
-            Tables</span>
-        </a>
-      </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents">
-          <i class="fa fa-fw fa-wrench"></i>
+          <i class="fa fa-fw fa-pencil-square-o"></i>
           <span class="nav-link-text">
-            Components</span>
+            Posts</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapseComponents">
           <li>
-            <a href="#">Static Navigation</a>
+            <a href="{{ route('posts') }}"><i class="fa fa-fw fa-caret-right"></i> View Posts</a>
           </li>
           <li>
-            <a href="#">Custom Card Examples</a>
-          </li>
-          <li>
-            <a href="#">Blank Page</a>
-          </li>
-          <li>
-            <a href="#">Login Page</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti">
-          <i class="fa fa-fw fa-sitemap"></i>
-          <span class="nav-link-text">
-            Menu Levels</span>
-        </a>
-        <ul class="sidenav-second-level collapse" id="collapseMulti">
-          <li>
-            <a href="#">Second Level Item</a>
-          </li>
-          <li>
-            <a href="#">Second Level Item</a>
-          </li>
-          <li>
-            <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
-            <ul class="sidenav-third-level collapse" id="collapseMulti2">
-              <li>
-                <a href="#">Third Level Item</a>
-              </li>
-              <li>
-                <a href="#">Third Level Item</a>
-              </li>
-            </ul>
+            <a href="{{ route('add_post') }}"><i class="fa fa-fw fa-caret-right"></i> Add New Post</a>
           </li>
         </ul>
       </li>

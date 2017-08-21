@@ -17,3 +17,4 @@
 
 <!-- Custom styles for this template -->
 <link href="{{url('css/sb-admin.css')}}" rel="stylesheet">
+<link href="{{url('css/app.css')}}" rel="stylesheet">

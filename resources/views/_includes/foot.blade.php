@@ -48,7 +48,7 @@
 
 <!-- Copyright -->
 <div id="copyright">
-    <ul><li>&copy; {{ \Carbon\Carbon::now()->year}} Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    <ul><li>&copy; {{ \Carbon\Carbon::now()->year}} <a href="{{url('/')}}">My Developer Blog</a></li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 </div>
 
 

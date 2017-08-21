@@ -19,6 +19,8 @@
 
         @include('admin._includes.breadcrumb')
 
+        <hr/>
+
         @yield('content')
 
       </div>
