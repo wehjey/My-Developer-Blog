@@ -1,14 +1,14 @@
 <!-- Header -->
 <header id="header">
-    <a href="index.html" class="logo">Massively</a>
+    <a href="index.html" class="logo">{{'</Developer>'}}</a>
 </header>
 
 <!-- Nav -->
 <nav id="nav">
     <ul class="links">
-        <li class="active"><a href="{{url('/')}}">This is Massively</a></li>
-        <li><a href="{{url('/post')}}">Generic Page</a></li>
-        <li><a href="elements.html">Elements Reference</a></li>
+        <li class="{{($page == 'home') ? 'active' : ''}}"><a href="{{url('/')}}">{{'</Home>'}}</a></li>
+        {{--  <li class="{{($page == 'post') ? 'active' : ''}}"><a href="{{url('/post')}}">Generic Page</a></li>
+        <li><a href="elements.html">Elements Reference</a></li>  --}}
     </ul>
     <ul class="icons">
         <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>

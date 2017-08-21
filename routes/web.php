@@ -12,24 +12,30 @@
 */
 
 
-Route::get('/', function () {
-    $data = [
-        'title' => 'My Developer Blog',
-        'page' => 'Home'
-    ];
-    return view('pages.home',$data);
+Route::get('/', 'PostController@home');
+
+Route::get('/post/{slug}', 'PostController@show')->name('view');
+
+
+/*
+*
+*   ADMINISTRATIVE ROUTES
+*
+*/
+Route::group(['prefix' => 'admin'], function() {
+    
+    Route::get('/', 'AdminController@dashboard')->name('dashboard');
+    Route::get('posts', 'AdminController@showPosts')->name('posts');
+    Route::get('add_post', 'AdminController@showAddPost')->name('add_post');
+    Route::post('add_post', 'AdminController@insertPost')->name('insert_post');
+    Route::get('publish/{slug}', 'AdminController@publishPost')->name('publish');
+    Route::get('suspend/{slug}', 'AdminController@suspendPost')->name('suspend');
+    Route::get('edit/{slug}', 'AdminController@editPost')->name('edit');
+    Route::get('discard/{slug}', 'AdminController@discardPost')->name('discard');
+
 });
 
-Route::get('/post', function () {
-    $data = [
-        'title' => 'My Developer Blog',
-        'page' => 'post'
-    ];
-    return view('pages.post',$data);
-});
-
-Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
