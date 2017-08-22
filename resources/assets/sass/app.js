@@ -31,5 +31,16 @@ export default StyleSheet.create({
   'author': {
     'fontStyle': 'italic',
     'fontSize': [{ 'unit': 'px', 'value': 12 }]
+  },
+  'thumbnail': {
+    'height': [{ 'unit': 'px', 'value': 200 }],
+    'marginBottom': [{ 'unit': 'px', 'value': 10 }]
+  },
+  'label': {
+    'fontSize': [{ 'unit': 'px', 'value': 10 }],
+    'backgroundColor': 'brown',
+    'color': 'white',
+    'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
+    'borderRadius': '4px'
   }
 });

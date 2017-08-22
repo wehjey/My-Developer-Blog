@@ -30,7 +30,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('add_post', 'AdminController@insertPost')->name('insert_post');
     Route::get('publish/{slug}', 'AdminController@publishPost')->name('publish');
     Route::get('suspend/{slug}', 'AdminController@suspendPost')->name('suspend');
-    Route::get('edit/{slug}', 'AdminController@editPost')->name('edit');
+    Route::get('edit/{slug}', 'AdminController@showEditPost')->name('edit'); //..Show post edit form
+    Route::post('edit', 'AdminController@editPost')->name('edit_post'); //..Submit post edit form
     Route::get('discard/{slug}', 'AdminController@discardPost')->name('discard');
 
 });
