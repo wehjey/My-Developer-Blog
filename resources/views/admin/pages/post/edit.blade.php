@@ -8,7 +8,8 @@
 </div>
 @endif
 
-  <form role="form" class="form-horizontal" action="{{ route('insert_post') }}" method="POST" encType="multipart/form-data">
+  <form role="form" class="form-horizontal" action="{{ route('edit_post') }}" method="POST" encType="multipart/form-data">
+    <input type="hidden" name="post_id" value="{{$post->id}}"/>
     {{ csrf_field() }}
     <!-- form group -->
     <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
@@ -21,7 +22,7 @@
             <strong>{{ $errors->first('title') }}</strong>
           </span>
         @endif
-        <input id="title" class="p-textbox" type="text" name="title" value="{{ old('title') }}" placeholder="Enter title..."/>
+        <input id="title" class="p-textbox" type="text" name="title" value="{{ $post->title }}" placeholder="Enter title..."/>
       </div>
     </div>
     <!-- end form group -->
@@ -32,12 +33,14 @@
         <label for="image" class="form-label"><i class="fa fa-plus-circle"></i> Header Image</label>
       </p>
       <div class="t-wrapper">
+          <img class="img-responsive thumbnail" src="{{url($post->image->image_url)}}" alt="{{$post->title}}" />
         @if($errors->has('image'))
           <span class="help-block">
             <strong>{{ $errors->first('image') }}</strong>
           </span>
         @endif
         <input id="image" class="p-textbox" type="file" name="image"/>
+        <label class="label">Note: Choosing a new header image will replace the present one</label>
       </div>
     </div>
     <!-- end form group -->
@@ -53,7 +56,7 @@
             <strong>{{ $errors->first('introduction') }}</strong>
           </span>
         @endif
-        <input id="introduction" class="p-textbox" type="text" name="introduction" value="{{ old('introduction') }}" placeholder="Enter introduction..."/>
+        <input id="introduction" class="p-textbox" type="text" name="introduction" value="{{ $post->introduction }}" placeholder="Enter introduction..."/>
       </div>
     </div>
     <!-- end form group -->
@@ -69,7 +72,7 @@
             <strong>{{ $errors->first('content') }}</strong>
           </span>
         @endif
-        <textarea id="content" type="text" name="content" placeholder="Enter post...">{{ old('content') }}</textarea>
+        <textarea id="content" type="text" name="content">{{ $post->content}}</textarea>
       </div>
     </div>
     <!-- end form group -->
@@ -79,7 +82,7 @@
       <hr/>
 
       <label>
-        <input type="checkbox" name="publish"/> Publish this post
+        <input type="checkbox" name="publish" {{ $post->published ? 'checked': ''}}/> Publish this post
       </label>
 
       <p>
