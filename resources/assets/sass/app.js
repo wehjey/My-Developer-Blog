@@ -42,5 +42,20 @@ export default StyleSheet.create({
     'color': 'white',
     'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
     'borderRadius': '4px'
+  },
+  'avatar': {
+    'height': [{ 'unit': 'px', 'value': 200 }]
+  },
+  'name': {
+    'fontStyle': 'normal',
+    'fontFamily': ''Raleway', sans-serif',
+    'fontWeight': 'bold'
+  },
+  'position': {
+    'fontSize': [{ 'unit': 'px', 'value': 12 }],
+    'fontWeight': 'bold'
+  },
+  'surname': {
+    'color': 'gold'
   }
 });

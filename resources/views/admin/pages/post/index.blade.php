@@ -14,7 +14,7 @@
 </div>
 @endif
 
-  <table class="table table-stripped">
+  <table id="postTable" class="table table-stripped">
 
     <thead>
       <tr>
@@ -85,5 +85,8 @@
         var confirmAction = confirm("Are you sure?");
         if(!confirmAction) return false;
     }
+    $(document).ready(function(){
+        $('#postTable').DataTable();
+    });
 </script>
 @endsection
