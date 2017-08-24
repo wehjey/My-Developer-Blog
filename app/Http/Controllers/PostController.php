@@ -20,6 +20,8 @@ class PostController extends Controller
 
     public function show($slug){
         $post = Post::where('slug',$slug)->with(['image','user'])->first();
+        $post->views += 1;
+        $post->save();
         $data = [
             'title' => $post->title.' | My Developer Blog',
             'page' => 'post',

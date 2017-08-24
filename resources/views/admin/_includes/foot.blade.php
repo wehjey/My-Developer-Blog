@@ -11,3 +11,4 @@
 
 <!-- Custom scripts for this template -->
 <script src="{{url('js/sb-admin.min.js')}}"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>

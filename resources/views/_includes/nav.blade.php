@@ -1,6 +1,6 @@
 <!-- Header -->
 <header id="header">
-    <a href="index.html" class="logo">{{'</Developer>'}}</a>
+    <a href="{{url('/')}}" class="logo">{{'</Developer>'}}</a>
 </header>
 
 <!-- Nav -->
@@ -11,9 +11,9 @@
         <li><a href="elements.html">Elements Reference</a></li>  --}}
     </ul>
     <ul class="icons">
-        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://twitter.com/weje_NW" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.facebook.com/eweje1" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/wehjey/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/wehjey" class="icon fa-github"><span class="label">GitHub</span></a></li>
     </ul>
 </nav>
