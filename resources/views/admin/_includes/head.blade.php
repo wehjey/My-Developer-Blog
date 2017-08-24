@@ -18,3 +18,4 @@
 <!-- Custom styles for this template -->
 <link href="{{url('css/sb-admin.css')}}" rel="stylesheet">
 <link href="{{url('css/app.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
