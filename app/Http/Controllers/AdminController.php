@@ -15,9 +15,21 @@ class AdminController extends Controller
     }
 
     public function dashboard(){
+        $post = Post::all();
+        $totalViews = 0;
+        
+        foreach($post as $ps){
+            $totalViews += $ps->views;
+        }
+
         $data = [
-            'title' => 'Admin | My Developer Blog',
-            'pageLabel' => 'Home'
+            'title' => 'Dashboard | My Developer Blog',
+            'pageLabel' => 'Home',
+            'totalPost' => $post->count(),
+            'totalPublished' => $post->where('published',1)->count(),
+            'totalDraft' => $post->where('published',0)->count(),
+            'totalViews' => $totalViews,
+            'hottestPost' => Post::orderBy('views','desc')->first()
         ];
         return view('admin.pages.dashboard',$data);
     }
